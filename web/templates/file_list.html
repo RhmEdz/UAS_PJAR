@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>
+File Storage Server
+</title>
+
+
+<link rel="stylesheet" href="/static/style.css">
+
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<h1>
+📁 File Storage Server
+</h1>
+
+
+
+<div class="file-container">
+
+
+{% for file in files %}
+
+
+{% if file.strip() %}
+
+<div class="file-card">
+
+
+<pre>
+
+{{file}}
+
+</pre>
+
+
+<a href="/download/{{ file[0] }}">
+
+
+
+</a>
+
+
+</div>
+
+
+{% endif %}
+
+
+{% endfor %}
+
+
+
+</div>
+
+
+
+
+<a href="/dashboard">
+
+<button>
+⬅ Back Dashboard
+</button>
+
+</a>
+
+
+</div>
+
+
+</body>
+
+</html>

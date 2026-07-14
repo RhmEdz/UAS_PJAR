@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>
+Network Dashboard
+</title>
+
+<link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="navbar">
+
+<div>
+
+<h2>
+🌐 Network Programming System
+</h2>
+
+<p>
+Client-Server Network Management Platform
+</p>
+
+</div>
+
+
+<div class="user-box">
+
+👤 {{session['email']}}
+
+<br>
+
+🔐 Verified Account
+
+</div>
+
+
+</div>
+
+
+
+<div class="container">
+
+
+<h1>
+Dashboard
+</h1>
+
+{% if request.args.get('status') == 'success' %}
+
+<div class="success-alert">
+
+✅ File berhasil diupload menggunakan TCP Socket
+
+</div>
+
+{% endif %}
+
+<!-- STATUS -->
+
+<div class="status-container">
+
+
+<div class="status-card">
+<h3>TCP SERVER</h3>
+<p class="online">
+● ONLINE
+</p>
+</div>
+
+
+
+
+
+
+
+<div class="status-card">
+<h3>SMTP AUTH</h3>
+<p class="online">
+● ONLINE
+</p>
+</div>
+
+
+
+<div class="status-card">
+<h3>DATABASE</h3>
+<p class="online">
+● ONLINE
+</p>
+</div>
+
+
+
+</div>
+
+
+
+
+
+<div class="grid">
+
+
+<!-- TCP -->
+
+<div class="panel">
+
+
+<h2>
+📁 TCP FILE TRANSFER
+</h2>
+
+
+<p>
+Reliable file transfer menggunakan TCP Socket
+</p>
+
+
+
+<a href="/upload">
+
+<button>
+⬆ Upload File
+</button>
+
+</a>
+
+
+<a href="/refresh_file">
+
+<button>
+🔄 Refresh File
+</button>
+
+</a>
+
+
+
+
+
+<div class="terminal">
+
+{% for log in logs %}
+
+{{log}}
+
+<br>
+
+{% endfor %}
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<table>
+
+
+<tr>
+
